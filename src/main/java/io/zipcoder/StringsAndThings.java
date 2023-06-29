@@ -8,6 +8,10 @@ public class StringsAndThings {
 
     /**
      * Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z' in "fez" count,
+     *
+     * count words ending in y or z
+     *
+     *
      * but not the 'y' in "yellow" (not case sensitive). We'll say that a y or z is at the end of a word if there is not an alphabetic
      * letter immediately following it. (Note: Character.isLetter(char) tests if a char is an alphabetic letter.)
      * example : countYZ("fez day"); // Should return 2
@@ -15,6 +19,7 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
+        //count words ending in y or z
         return null;
     }
 
@@ -28,6 +33,7 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
+        // remove what the user specifys
         return null;
     }
 
@@ -40,6 +46,7 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
+        // if not has same apperance of is return true
         return null;
     }
 
@@ -51,6 +58,7 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
+        //all gs must be happy
         return null;
     }
 
@@ -63,6 +71,7 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
+        //it checks for triple characters eg.sss if ssss count as 2
         return null;
     }
 }
