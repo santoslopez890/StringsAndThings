@@ -19,8 +19,26 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        //count words ending in y or z
-        return null;
+        int count = 0;
+        int len = input.length();
+
+
+        input = input.toLowerCase();
+        for (int i = 0; i < input.length(); i++) //loops through string
+        {
+            if (input.charAt(i) == 'y' || input.charAt(i) == 'z') //if input is y or z
+            {
+                if (i < len - 1 && !Character.isLetter(input.charAt(i + 1)))//if i is less than length and character is not a character after i
+                    count++;
+                else if (i == len - 1)
+                    count++;
+
+            }
+
+        }
+        return count;
+
+
     }
 
     /**
@@ -34,6 +52,10 @@ public class StringsAndThings {
      */
     public String removeString(String base, String remove){
         // remove what the user specifys
+        //iterate through base and remove what user specifys
+        for(int i=0;i < base.length();i++){
+
+        }
         return null;
     }
 
