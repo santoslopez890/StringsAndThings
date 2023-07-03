@@ -53,10 +53,11 @@ public class StringsAndThings {
     public String removeString(String base, String remove){
         // remove what the user specifys
         //iterate through base and remove what user specifys
-        for(int i=0;i < base.length();i++){
+        String para = base;
 
-        }
-        return null;
+        String replace = para.replace(remove,"");
+        System.out.println(replace);
+        return replace;
     }
 
     /**
@@ -68,8 +69,16 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        // if not has same apperance of is return true
-        return null;
+        String strNotMissing = input.replaceAll("not", "");
+        //replaces not with ""
+        String strIsMissing = input.replaceAll("is", "");
+        //replaces is with ""
+
+        int notCount = (input.length() - strNotMissing.length()) / 3;
+        //gets both lengths of strings and checks how many times is and not is in them
+        int isCount = (input.length() - strIsMissing.length()) / 2;
+
+        return isCount == notCount;
     }
 
     /**
@@ -80,8 +89,11 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        //all gs must be happy
-        return null;
+
+        
+       return input.matches(".*gg.*") && !input.matches(".*(?<!g)g(?!g).*");
+
+
     }
 
 
@@ -93,7 +105,16 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        //it checks for triple characters eg.sss if ssss count as 2
-        return null;
+
+            int tripCount = 0;
+            for(int i=0;i<input.length()-2;i++)//abcXXXabc
+            {
+                if(input.charAt(i+1) != input.charAt(i+2))
+                    i++;
+                else if(input.charAt(i) == input.charAt(i+1))
+                    tripCount++;
+            }
+            return tripCount;
+        }
     }
-}
+
